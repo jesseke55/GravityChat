@@ -1,9 +1,13 @@
 package net.gravitynetwork.chat;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+
 
 /**
  * Created by Jesse on 20-12-2015.
@@ -21,6 +25,7 @@ public class Main extends JavaPlugin implements Listener {
         CONFIG();
         Bukkit.getPluginManager().registerEvents(new Chat(), this);
         Bukkit.getPluginManager().registerEvents(this, this);
+        Bukkit.getPluginManager().registerEvents(new PlayerTag(), this);
     }
 
     public void onDisable(){
@@ -47,4 +52,25 @@ public class Main extends JavaPlugin implements Listener {
 
 
     }
+
+
+    public boolean onCommand(CommandSender sender, Command cmd, String commandlabel, String[] args){
+
+        if(cmd.getName().equalsIgnoreCase("gravitychat")){
+            if(args.length ==0){
+            sender.sendMessage(ChatColor.AQUA + "Gravity Chat has been enabled!");
+            }
+            else if(args.length ==1){
+                if(args[0].equalsIgnoreCase("i-want-reload")){
+                    reloadConfig();
+                    sender.sendMessage("The chat config has been reloaded!");
+
+                }
+            }
+        }
+
+
+        return true;
+    }
+
 }

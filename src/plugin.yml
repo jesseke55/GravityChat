@@ -2,3 +2,8 @@ name: GravityChat
 main: net.gravitynetwork.chat.Main
 version: 1.0
 description: The chat plugin of Gravity Network
+
+commands:
+  gravitychat:
+    usage: /<command>
+    description: reload the chat plugin
