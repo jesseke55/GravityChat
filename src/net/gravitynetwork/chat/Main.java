@@ -28,6 +28,7 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     private void CONFIG(){
+        getConfig().addDefault("Chat.delimeter",  "&3>> &6%s");
         getConfig().addDefault("Chat.default", "&6%s &3>> &6%s");
         getConfig().addDefault("Chat.gravity", "&8&l[&9Gravity&8&l] &6&l%s &3>> &6%s");
         getConfig().addDefault("Chat.gravityvip", "&8&l[&9Gravity &6&lVIP&8&l] &6&l%s &3>> &6%s");
@@ -38,7 +39,6 @@ public class Main extends JavaPlugin implements Listener {
         getConfig().addDefault("Chat.mod", "&8&l[&bMod&8&l] &6&l%s &3>> &6%s");
         getConfig().addDefault("Chat.admin", "&8&l[&4Admin&8&l] &6&l%s &3>> &6%s");
         getConfig().addDefault("Chat.dev", "&8&l[&e&lDeveloper&8&l] &6&l%s &3>> &6%s");
-        getConfig().addDefault("Chat.sysadmin", "&8&l[&5&lSystem Administrator&8&l] &6&l%s &3>> &6%s");
         getConfig().addDefault("Chat.owner", "&8&l[&a&lOwner&8&l] &6&l%s &3>> &6%s");
 
 

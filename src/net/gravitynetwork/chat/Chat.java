@@ -44,9 +44,6 @@ public class Chat implements Listener {
         if(p.hasPermission("gravity.chat.dev")){
             e.setFormat(ChatColor.translateAlternateColorCodes('&', Main.getPlugin().getConfig().getString("Chat.dev")));
         }
-        if(p.hasPermission("gravity.chat.sysadmin")){
-            e.setFormat(ChatColor.translateAlternateColorCodes('&', Main.getPlugin().getConfig().getString("Chat.sysadmin")));
-        }
         if(p.hasPermission("gravity.chat.owner") || (p.isOp())){
             e.setFormat(ChatColor.translateAlternateColorCodes('&', Main.getPlugin().getConfig().getString("Chat.owner")));
         }
