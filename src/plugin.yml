@@ -1,0 +1,4 @@
+name: GravityChat
+main: net.gravitynetwork.chat.Main
+version: 1.0
+description: The chat plugin of Gravity Network
